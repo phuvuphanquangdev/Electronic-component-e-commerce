@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Providers.Entities;
 using System.Web.Security;
 namespace MvcBanHang.Controllers
 {
@@ -34,10 +35,17 @@ namespace MvcBanHang.Controllers
                 if (UserLogOn != null)
                 {
                     FormsAuthentication.SetAuthCookie(UserLogOn.tenDN, true);
-                    return RedirectToAction("Index");
-                }              
-                return View("LogOn", model);
+
+                    return RedirectToAction("Index","Home");
+                }
+                else
+                {
+                    // Nếu thông tin đăng nhập không đúng, thêm thông báo lỗi vào ModelState
+                    ModelState.AddModelError("", "Tên đăng nhập hoặc mật khẩu không chính xác.");
+                }
+                //return View("LogOn", model);
             }
+            // Nếu có lỗi, hiển thị lại trang đăng nhập với thông tin đã nhập
             return View("LogOn", model);
         }
         #endregion

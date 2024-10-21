@@ -27,23 +27,25 @@
     <div class="login">
         @if (HttpContext.Current.Session["KhachHang"] != null)
         {
-        <p class="dangxuat">
-            @Html.ActionLink("Đăng Xuất", "LogOut", "Customer")
-        </p>
+            <p class="dangxuat">
+                @Html.ActionLink("Đăng Xuất", "LogOut", "Customer")
+            </p>
         }
         else
         {
-        <p class="dangnhap">
-            @Html.ActionLink("Đăng Nhập", "Index", "Customer")
-        </p>
+            <p class="dangnhap">
+                @Html.ActionLink("Đăng Nhập", "Index", "Customer")
+            </p>
         }
         <p class="dangky">
             @Html.ActionLink("Đăng Ký", "Register", "Customer")
         </p>
     </div>
-    <p>Welcome, <a href="#" id="user"></a></p>
+
+    @*<p>Welcome, <a>@Session["KhachHang"]</a></p>*@
+    <p class="welcome-message">Chào mừng, <span class="username">@Session["KhachHang"]</span></p>
     <p>
-        <a href="@Url.Action("Index", "Shopping" )" class="cart">
+        <a href="@Url.Action("ShowCart", "Shopping" )" class="cart">
             <img src="~/Content/Layout/css/Image/cart-icon.png" />
             Giỏ hàng
         </a>

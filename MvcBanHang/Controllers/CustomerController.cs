@@ -35,7 +35,12 @@ namespace MvcBanHang.Controllers
                 var kh = BanHangLogic.CheckKhachHang(model.tenDN, model.matkhau);
                 if (kh != null)
                 {
-                    Session["KhachHang"] = kh;
+                    Session["KhachHang"] = model.tenDN;
+                    if (Session["KhachHang"] == null)
+                    {
+                        // Thêm logic xử lý nếu session không lưu được
+                        throw new Exception("Session not set correctly.");
+                    }
                     return RedirectToAction("ShowCart", "Shopping");
                 }
                 return View("Index", model);
