@@ -1,0 +1,117 @@
+﻿@model MvcBanHang.Models.sanpham
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Sản Phẩm</legend>
+
+    <div class="display-label">
+        Tên sản phẩm:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tensp)
+    </div>
+
+    <div class="display-label">
+        Hình Sản Phẩm:
+    </div>
+    <div class="display-field">
+        <img src="@Url.Content("~/Content/SanPham/"+Model.hinhsp)" style="width:100px" />
+    </div>
+
+    <div class="display-label">
+        Mô Tả:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.mota)
+    </div>
+
+    <div class="display-label">
+        Kích Cỡ:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.kichco)
+    </div>
+
+    <div class="display-label">
+        Đơn Vị Tính:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.donvitinh)
+    </div>
+
+    <div class="display-label">
+        Đơn giá:
+    </div>
+    <div class="display-field">
+        @*@Html.DisplayFor(model => model.dongia)*@
+        @string.Format("{0:0,0 VNĐ}", Model.dongia).Replace(",", ".")
+
+
+    </div>
+
+    <div class="display-label">
+        Danh Mục:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.loai.tenloai)
+    </div>
+
+    <div class="display-label">
+        Công Nghệ:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.congnghe.loaicn)
+    </div>
+
+    <div class="display-label">
+        Dung Lượng:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dungluong.loaidl)
+    </div>
+
+    <div class="display-label">
+        Nhà cung cấp:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.nhacungcap.tenncc)
+    </div>
+
+    <div class="display-label">
+        Hãng Sản Xuất:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.hangsanxuat.tenhsx)
+    </div>
+
+    <div class="display-label">
+        Ngày Cập Nhật:
+    </div>
+    <div class="display-field">
+        @String.Format("{0:dd/MM/yyyy}", Model.ngaycapnhat)
+    </div>
+
+    <div class="display-label">
+        Số Lượng:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.soluong)
+    </div>
+
+    <div class="display-label">
+        Số Lần Xem:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.solanxem)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Cập nhật lại thông tin", "Edit", new {  id=Model.masp  }) |
+    @Html.ActionLink("Trở về", "Index")
+</p>

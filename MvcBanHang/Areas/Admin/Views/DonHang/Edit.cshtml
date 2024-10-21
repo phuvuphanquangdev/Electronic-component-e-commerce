@@ -1,0 +1,65 @@
+﻿@model MvcBanHang.Models.donhang
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>donhang</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.madh)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.madh)
+            @Html.ValidationMessageFor(model => model.madh)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.tennguoinhan)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.tennguoinhan)
+            @Html.ValidationMessageFor(model => model.tennguoinhan)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.diachinhan)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.diachinhan)
+            @Html.ValidationMessageFor(model => model.diachinhan)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.dienthoainhan)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.dienthoainhan)
+            @Html.ValidationMessageFor(model => model.dienthoainhan)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.dagiao)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.dagiao)
+            @Html.ValidationMessageFor(model => model.dagiao)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

@@ -1,0 +1,139 @@
+﻿@model MvcBanHang.Models.sanpham
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<center>
+    <h2>Create</h2>
+</center>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+<fieldset>
+
+    <center>
+        <legend>Sản Phẩm</legend>
+
+        <div class="editor-label">
+            Tên Sản Phẩm
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.tensp)
+            @Html.ValidationMessageFor(model => model.tensp)
+        </div>
+
+        <div class="editor-label">
+            Hình Sản Phẩm
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.hinhsp)
+            @Html.ValidationMessageFor(model => model.hinhsp)
+        </div>
+
+        <div class="editor-label">
+            Mô Tả
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.mota)
+            @Html.ValidationMessageFor(model => model.mota)
+        </div>
+
+        <div class="editor-label">
+            Kích Cỡ
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.kichco)
+            @Html.ValidationMessageFor(model => model.kichco)
+        </div>
+
+        <div class="editor-label">
+            Đơn vị
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.donvitinh)
+            @Html.ValidationMessageFor(model => model.donvitinh)
+        </div>
+
+        <div class="editor-label">
+            Đơn giá
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.dongia)
+            @Html.ValidationMessageFor(model => model.dongia)
+        </div>
+
+        <div class="editor-label">
+            Danh mục
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("maloai", String.Empty)
+            @Html.ValidationMessageFor(model => model.maloai)
+        </div>
+
+        <div class="editor-label">
+            Công nghệ
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("macn", String.Empty)
+            @Html.ValidationMessageFor(model => model.macn)
+        </div>
+
+        <div class="editor-label">
+            Dung lượng
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("madl", String.Empty)
+            @Html.ValidationMessageFor(model => model.madl)
+        </div>
+
+        <div class="editor-label">
+            Nhà cung cấp
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("mancc", String.Empty)
+            @Html.ValidationMessageFor(model => model.mancc)
+        </div>
+
+        <div class="editor-label">
+            Hãng sản xuất
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("mahsx", String.Empty)
+            @Html.ValidationMessageFor(model => model.mahsx)
+        </div>
+
+        <div class="editor-label">
+            Ngày cập nhật
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ngaycapnhat)
+            @Html.ValidationMessageFor(model => model.ngaycapnhat)
+        </div>
+
+        <div class="editor-label">
+            Số lượng
+            <div class="editor-field">
+                @Html.EditorFor(model => model.soluong)
+                @Html.ValidationMessageFor(model => model.soluong)
+            </div>
+
+            <div class="editor-label">
+                Số lần xem
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.solanxem)
+                @Html.ValidationMessageFor(model => model.solanxem)
+            </div>
+
+            <p>
+                <input type="submit" value="Create" />
+            </p>
+    </center>
+</fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

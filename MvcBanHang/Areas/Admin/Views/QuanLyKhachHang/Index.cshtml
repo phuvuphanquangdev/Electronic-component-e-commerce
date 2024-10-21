@@ -1,0 +1,56 @@
+﻿@model IEnumerable<MvcBanHang.Models.khachhang>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Admin Quản lý</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table" border="1">
+    <tr>
+        <th>Tên khách hàng</th>
+        <th>Giới tính</th>
+        <th>Địa chỉ</th>
+        <th>Email</th>
+        <th>Điện thoại</th>
+        <th>Tài khoản</th>
+        <th>Mật khẩu</th>
+        <th>Chức năng</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tenkh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.diachi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dienthoai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tenDN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.matkhau)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.makh  }) |
+            @Html.ActionLink("Details", "Details", new {  id=item.makh }) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.makh })
+        </td>
+    </tr>
+}
+
+</table>

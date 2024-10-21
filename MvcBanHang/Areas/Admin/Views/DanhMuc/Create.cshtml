@@ -1,0 +1,34 @@
+﻿@model MvcBanHang.Models.loai
+
+@{
+    ViewBag.Title = "Thêm mới";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Thêm mới</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Danh mục</legend>
+
+
+        <div class="editor-label">
+            Tên danh mục
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.tenloai)
+            @Html.ValidationMessageFor(model => model.tenloai)
+        </div>
+
+        <div>
+            <input type="submit" value="Thêm mới" />
+        </div>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Trở về", "Index")
+</div>

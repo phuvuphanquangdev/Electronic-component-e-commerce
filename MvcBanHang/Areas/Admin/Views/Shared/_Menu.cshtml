@@ -1,0 +1,108 @@
+﻿<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+    <!-- QUANG PHÚ -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="~/Admin/ProductAdmin/Index">
+        <div class="sidebar-brand-icon rotate-n-15">
+            <i class="fas fa-laugh-wink"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">QUANG PHÚ computer</div>
+    </a>
+
+    <hr class="sidebar-divider my-0">
+
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item active">
+        <a class="nav-link" href="~/Admin/ProductAdmin/Index">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>ADMIN Quản Lý</span>
+        </a>
+    </li>
+        
+    <hr class="sidebar-divider">
+
+    <!-- Sản phẩm -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" data-toggle="collapse" data-target="#collapseSanPham" aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Sản phẩm</span>
+        </a>
+        <div id="collapseSanPham" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item">@Html.ActionLink("Sản phẩm", "Index", "ProductAdmin")</a>
+                <a class="collapse-item">@Html.ActionLink("Thêm", "Create", "ProductAdmin")</a>
+            </div>
+        </div>
+    </li>
+
+    <hr class="sidebar-divider">
+
+    <!-- Danh mục -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+            <i class="fas fa-fw fa-wrench"></i>
+            <span>Danh mục sản phẩm</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item">@Html.ActionLink("Danh Mục", "Index", "DanhMuc")</a>
+                <a class="collapse-item">@Html.ActionLink("Thêm ", "Create", "DanhMuc")</a>
+            </div>
+        </div>
+    </li>
+
+    <hr class="sidebar-divider">
+
+    <!-- Nhà Sản Xuất -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Nhà Sản Xuất</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item">@Html.ActionLink("Nhà sản xuất", "Index", "NhaSanXuat")</a>
+                <a class="collapse-item">@Html.ActionLink("Thêm", "Create", "NhaSanXuat")</a>
+            </div>
+        </div>
+    </li>
+
+    <hr class="sidebar-divider">
+
+    <!-- Hóa Đơn -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" data-toggle="collapse" data-target="#hoadon" aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Đơn hàng</span>
+        </a>
+        <div id="hoadon" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item">@Html.ActionLink("Đơn hàng", "Index", "DonHang")</a>
+            </div>
+        </div>
+    </li>
+
+    <hr class="sidebar-divider">
+
+    <!-- Khách Hàng -->
+    <li class="nav-item">
+        <a class="nav-link collapsed"  data-toggle="collapse" data-target="#khachang" aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Quản lý khách hàng</span>
+        </a>
+        <div id="khachang" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item">@Html.ActionLink("Quản lý người dùng", "Index", "QuanLyKhachHang")</a>
+                <a class="collapse-item">@Html.ActionLink("Thêm", "Create", "QuanLyKhachHang")</a>
+            </div>
+        </div>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block">
+
+    <!-- Sidebar Toggler (Sidebar) -->
+    <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+    </div>
+
+</ul>

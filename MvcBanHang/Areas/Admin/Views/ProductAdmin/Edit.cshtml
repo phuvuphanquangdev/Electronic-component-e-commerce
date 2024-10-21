@@ -1,0 +1,148 @@
+﻿@model MvcBanHang.Models.sanpham
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<center>
+    <h2>Edit</h2>
+</center>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+<fieldset>
+    <center>
+        <legend>Sản Phẩm</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.masp)
+        </div>
+
+        <div class="editor-field">
+            @Html.EditorFor(model => model.masp)
+            @Html.ValidationMessageFor(model => model.masp)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.tensp)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.tensp)
+            @Html.ValidationMessageFor(model => model.tensp)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.hinhsp)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.hinhsp)
+            @Html.ValidationMessageFor(model => model.hinhsp)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.mota)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.mota)
+            @Html.ValidationMessageFor(model => model.mota)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.kichco)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.kichco)
+            @Html.ValidationMessageFor(model => model.kichco)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.donvitinh)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.donvitinh)
+            @Html.ValidationMessageFor(model => model.donvitinh)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.dongia)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.dongia)
+            @Html.ValidationMessageFor(model => model.dongia)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.maloai, "loai")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("maloai", String.Empty)
+            @Html.ValidationMessageFor(model => model.maloai)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.macn, "congnghe")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("macn", String.Empty)
+            @Html.ValidationMessageFor(model => model.macn)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.madl, "dungluong")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("madl", String.Empty)
+            @Html.ValidationMessageFor(model => model.madl)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.mancc, "nhacungcap")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("mancc", String.Empty)
+            @Html.ValidationMessageFor(model => model.mancc)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.mahsx, "hangsanxuat")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("mahsx", String.Empty)
+            @Html.ValidationMessageFor(model => model.mahsx)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ngaycapnhat)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ngaycapnhat)
+            @Html.ValidationMessageFor(model => model.ngaycapnhat)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.soluong)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.soluong)
+            @Html.ValidationMessageFor(model => model.soluong)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.solanxem)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.solanxem)
+            @Html.ValidationMessageFor(model => model.solanxem)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+        </center>
+</fieldset>
+}
+
+<div>
+    @Html.ActionLink("Trở về", "Index")
+</div>

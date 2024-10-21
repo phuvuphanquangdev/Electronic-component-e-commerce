@@ -1,0 +1,51 @@
+﻿@model MvcBanHang.Models.donhang
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>donhang</legend>
+
+    <div class="display-label">
+         Mã đơn hàng :
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.madh)
+    </div>
+
+    <div class="display-label">
+         Tên người nhận:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tennguoinhan)
+    </div>
+
+    <div class="display-label">
+        Địa chỉ nhận:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.diachinhan)
+    </div>
+
+    <div class="display-label">
+        Điện thoại nhận :
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dienthoainhan)
+    </div>
+
+    <div class="display-label">
+         Đã giao
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dagiao)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id=Model.madh }) |
+    @Html.ActionLink("Trở về", "Index")
+</p>

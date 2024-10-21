@@ -1,0 +1,55 @@
+﻿@model MvcBanHang.Models.donhang
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>donhang</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.madh)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.madh)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tennguoinhan)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tennguoinhan)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.diachinhan)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.diachinhan)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.dienthoainhan)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dienthoainhan)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.dagiao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dagiao)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

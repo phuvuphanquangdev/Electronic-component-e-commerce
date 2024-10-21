@@ -1,0 +1,76 @@
+﻿@model MvcBanHang.Models.khachhang
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Khách Hàng</legend>
+
+    <div class="display-label">
+         Mã khách hàng:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.makh)
+    </div>
+
+    <div class="display-label">
+         Tên khách hàng:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tenkh)
+    </div>
+
+    <div class="display-label">
+         Giới tính:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.phai)
+    </div>
+
+    <div class="display-label">
+         Địa chỉ:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.diachi)
+    </div>
+
+    <div class="display-label">
+         Email:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.email)
+    </div>
+
+    <div class="display-label">
+         Điện thoại:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dienthoai)
+    </div>
+
+    <div class="display-label">
+         Tên đăng nhập:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tenDN)
+    </div>
+
+    <div class="display-label">
+         Mật khẩu:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.matkhau)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Trở về", "Index")
+    </p>
+}

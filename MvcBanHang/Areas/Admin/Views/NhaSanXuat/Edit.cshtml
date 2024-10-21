@@ -1,0 +1,41 @@
+﻿@model MvcBanHang.Models.hangsanxuat
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>hangsanxuat</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.mahsx)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.mahsx)
+            @Html.ValidationMessageFor(model => model.mahsx)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.tenhsx)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.tenhsx)
+            @Html.ValidationMessageFor(model => model.tenhsx)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

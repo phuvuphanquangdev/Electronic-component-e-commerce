@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MvcBanHang.Models.donhang>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Admin Quản Lý</h2>
+
+<table class="table" border="1">
+    <tr>
+        <th>Khách mua hàng</th>
+        <th>Địa chỉ nhận hàng</th>
+        <th>Điện thoại</th>
+        <th>Giao hàng</th>
+        <th>Tình trạng</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.madh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tennguoinhan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.diachinhan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dienthoainhan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dagiao)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.madh }) |
+                @Html.ActionLink("Details", "Details", new { id = item.madh })
+            </td>
+        </tr>
+    }
+
+</table>

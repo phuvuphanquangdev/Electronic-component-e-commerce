@@ -1,0 +1,93 @@
+﻿@model MvcBanHang.Models.khachhang
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<center>
+    <h2>Edit</h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        <fieldset>
+            <legend>Khách hàng</legend>
+
+            <div class="editor-label">
+                Mã khach hàng:
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.makh)
+                @Html.ValidationMessageFor(model => model.makh)
+            </div>
+
+            <div class="editor-label">
+                Tên khách hàng:
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.tenkh)
+                @Html.ValidationMessageFor(model => model.tenkh)
+            </div>
+
+            <div class="editor-label">
+                Giới tính:
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.phai)
+                @Html.ValidationMessageFor(model => model.phai)
+            </div>
+
+            <div class="editor-label">
+                Địa chỉ:
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.diachi)
+                @Html.ValidationMessageFor(model => model.diachi)
+            </div>
+
+            <div class="editor-label">
+                Email:
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.email)
+                @Html.ValidationMessageFor(model => model.email)
+            </div>
+
+            <div class="editor-label">
+                Điện thoại:
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.dienthoai)
+                @Html.ValidationMessageFor(model => model.dienthoai)
+            </div>
+
+            <div class="editor-label">
+                Tên đăng nhập:
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.tenDN)
+                @Html.ValidationMessageFor(model => model.tenDN)
+            </div>
+
+            <div class="editor-label">
+                Mật khẩu:
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.matkhau)
+                @Html.ValidationMessageFor(model => model.matkhau)
+            </div>
+
+            <p>
+                <input type="submit" value="Save" />
+            </p>
+
+        </fieldset>
+
+    }
+
+    <div>
+        @Html.ActionLink("Trở về", "Index")
+    </div>
+</center>

@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BanHangModelStoreContainer" CdmEntityContainer="BanHangEntities">
+    <EntitySetMapping Name="congnghe">
+      <EntityTypeMapping TypeName="BanHangModel.congnghe">
+        <MappingFragment StoreEntitySet="congnghe">
+          <ScalarProperty Name="loaicn" ColumnName="loaicn" />
+          <ScalarProperty Name="macn" ColumnName="macn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chitiet_donhang">
+      <EntityTypeMapping TypeName="BanHangModel.chitiet_donhang">
+        <MappingFragment StoreEntitySet="chitiet_donhang">
+          <ScalarProperty Name="thanhtien" ColumnName="thanhtien" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+          <ScalarProperty Name="masp" ColumnName="masp" />
+          <ScalarProperty Name="madh" ColumnName="madh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chitiet_hoadon">
+      <EntityTypeMapping TypeName="BanHangModel.chitiet_hoadon">
+        <MappingFragment StoreEntitySet="chitiet_hoadon">
+          <ScalarProperty Name="thanhtien" ColumnName="thanhtien" />
+          <ScalarProperty Name="dongia" ColumnName="dongia" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+          <ScalarProperty Name="masp" ColumnName="masp" />
+          <ScalarProperty Name="mahd" ColumnName="mahd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="donhang">
+      <EntityTypeMapping TypeName="BanHangModel.donhang">
+        <MappingFragment StoreEntitySet="donhang">
+          <ScalarProperty Name="dagiao" ColumnName="dagiao" />
+          <ScalarProperty Name="dienthoainhan" ColumnName="dienthoainhan" />
+          <ScalarProperty Name="diachinhan" ColumnName="diachinhan" />
+          <ScalarProperty Name="tennguoinhan" ColumnName="tennguoinhan" />
+          <ScalarProperty Name="madh" ColumnName="madh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dungluong">
+      <EntityTypeMapping TypeName="BanHangModel.dungluong">
+        <MappingFragment StoreEntitySet="dungluong">
+          <ScalarProperty Name="loaidl" ColumnName="loaidl" />
+          <ScalarProperty Name="madl" ColumnName="madl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hangsanxuat">
+      <EntityTypeMapping TypeName="BanHangModel.hangsanxuat">
+        <MappingFragment StoreEntitySet="hangsanxuat">
+          <ScalarProperty Name="tenhsx" ColumnName="tenhsx" />
+          <ScalarProperty Name="mahsx" ColumnName="mahsx" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hoadon">
+      <EntityTypeMapping TypeName="BanHangModel.hoadon">
+        <MappingFragment StoreEntitySet="hoadon">
+          <ScalarProperty Name="manv" ColumnName="manv" />
+          <ScalarProperty Name="htgh" ColumnName="htgh" />
+          <ScalarProperty Name="httt" ColumnName="httt" />
+          <ScalarProperty Name="dienthoainhan" ColumnName="dienthoainhan" />
+          <ScalarProperty Name="diachinhan" ColumnName="diachinhan" />
+          <ScalarProperty Name="tennguoinhan" ColumnName="tennguoinhan" />
+          <ScalarProperty Name="ngaygiaohang" ColumnName="ngaygiaohang" />
+          <ScalarProperty Name="ngaydathang" ColumnName="ngaydathang" />
+          <ScalarProperty Name="makh" ColumnName="makh" />
+          <ScalarProperty Name="mahd" ColumnName="mahd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="khachhang">
+      <EntityTypeMapping TypeName="BanHangModel.khachhang">
+        <MappingFragment StoreEntitySet="khachhang">
+          <ScalarProperty Name="matkhau" ColumnName="matkhau" />
+          <ScalarProperty Name="tenDN" ColumnName="tenDN" />
+          <ScalarProperty Name="dienthoai" ColumnName="dienthoai" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="phai" ColumnName="phai" />
+          <ScalarProperty Name="tenkh" ColumnName="tenkh" />
+          <ScalarProperty Name="makh" ColumnName="makh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="loai">
+      <EntityTypeMapping TypeName="BanHangModel.loai">
+        <MappingFragment StoreEntitySet="loai">
+          <ScalarProperty Name="tenloai" ColumnName="tenloai" />
+          <ScalarProperty Name="maloai" ColumnName="maloai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nhacungcap">
+      <EntityTypeMapping TypeName="BanHangModel.nhacungcap">
+        <MappingFragment StoreEntitySet="nhacungcap">
+          <ScalarProperty Name="dienthoai" ColumnName="dienthoai" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="tenncc" ColumnName="tenncc" />
+          <ScalarProperty Name="mancc" ColumnName="mancc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nhanvien">
+      <EntityTypeMapping TypeName="BanHangModel.nhanvien">
+        <MappingFragment StoreEntitySet="nhanvien">
+          <ScalarProperty Name="matkhau" ColumnName="matkhau" />
+          <ScalarProperty Name="tenDN" ColumnName="tenDN" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="dienthoai" ColumnName="dienthoai" />
+          <ScalarProperty Name="cmnd" ColumnName="cmnd" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="phai" ColumnName="phai" />
+          <ScalarProperty Name="tennv" ColumnName="tennv" />
+          <ScalarProperty Name="manv" ColumnName="manv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="quangcao">
+      <EntityTypeMapping TypeName="BanHangModel.quangcao">
+        <MappingFragment StoreEntitySet="quangcao">
+          <ScalarProperty Name="ngayhethan" ColumnName="ngayhethan" />
+          <ScalarProperty Name="ngaybatdau" ColumnName="ngaybatdau" />
+          <ScalarProperty Name="href" ColumnName="href" />
+          <ScalarProperty Name="hinhminhhoa" ColumnName="hinhminhhoa" />
+          <ScalarProperty Name="tencty" ColumnName="tencty" />
+          <ScalarProperty Name="stt" ColumnName="stt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sanpham">
+      <EntityTypeMapping TypeName="BanHangModel.sanpham">
+        <MappingFragment StoreEntitySet="sanpham">
+          <ScalarProperty Name="solanxem" ColumnName="solanxem" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+          <ScalarProperty Name="ngaycapnhat" ColumnName="ngaycapnhat" />
+          <ScalarProperty Name="mahsx" ColumnName="mahsx" />
+          <ScalarProperty Name="mancc" ColumnName="mancc" />
+          <ScalarProperty Name="madl" ColumnName="madl" />
+          <ScalarProperty Name="macn" ColumnName="macn" />
+          <ScalarProperty Name="maloai" ColumnName="maloai" />
+          <ScalarProperty Name="dongia" ColumnName="dongia" />
+          <ScalarProperty Name="donvitinh" ColumnName="donvitinh" />
+          <ScalarProperty Name="kichco" ColumnName="kichco" />
+          <ScalarProperty Name="mota" ColumnName="mota" />
+          <ScalarProperty Name="hinhsp" ColumnName="hinhsp" />
+          <ScalarProperty Name="tensp" ColumnName="tensp" />
+          <ScalarProperty Name="masp" ColumnName="masp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

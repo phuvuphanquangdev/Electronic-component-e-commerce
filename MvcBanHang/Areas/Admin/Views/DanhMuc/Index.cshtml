@@ -1,0 +1,31 @@
+﻿@model IEnumerable<MvcBanHang.Models.loai>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Admin Quản Lý</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới", "Create")
+</p>
+<table class="table" border="1">
+    <tr>
+        <th>Tên danh mục sản phẩm</th>
+        <th> Chức năng nghiệp vụ</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tenloai)
+        </td>
+        
+        <td>
+            @Html.ActionLink("Cập nhật", "Edit", new {  id=item.maloai  })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,72 @@
+﻿@model MvcBanHang.Models.khachhang
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>khachhang</legend>
+
+    <div class="display-label">
+         Mã khách hàng:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.makh)
+    </div>
+
+    <div class="display-label">
+         Tên khách hàng:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tenkh)
+    </div>
+
+    <div class="display-label">
+        Giới tính:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.phai)
+    </div>
+
+    <div class="display-label">
+         Địa chỉ:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.diachi)
+    </div>
+
+    <div class="display-label">
+         Email:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.email)
+    </div>
+
+    <div class="display-label">
+         Điện thoại:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dienthoai)
+    </div>
+
+    <div class="display-label">
+         Tên đăng nhập:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tenDN)
+    </div>
+
+    <div class="display-label">
+         Mật khẩu:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.matkhau)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.makh }) |
+    @Html.ActionLink("Trở về", "Index")
+</p>
